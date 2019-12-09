@@ -24,7 +24,7 @@
   <script>
     var query = location.search.substr(1).split("&").map(param => param.split("=")).reduce((r, [k, v]) => Object.assign(r, { [k]: v }), {});
     var light1State = query["led1"] == 1;
-    var light2State = queyr["led2"] == 1;
+    var light2State = query["led2"] == 1;
     var light1View = document.getElementById("light-1");
     var light2View = document.getElementById("light-2");
     
