@@ -30,20 +30,28 @@
     
     light1View.addEventListener("click", e => {
       if (light1View.classList.contains("on")) {
-        fetch("http://" + query.ip + "/light-1/off");
+        fetch("http://" + query.ip + "/light-1/off").catch(
+          () => location = "http://" + query.ip + "/light-1/off"
+        );
         light1View.classList.remove("on");
       } else {
-        fetch("http://" + query.ip + "/light-1/on");
+        fetch("http://" + query.ip + "/light-1/on").catch(
+          () => location = "http://" + query.ip + "/light-1/on"
+        );
         light1View.classList.add("on");
       }
     });
     
     light2View.addEventListener("click", e => {
       if (light2View.classList.contains("on")) {
-        fetch("http://" + query.ip + "/light-2/off");
+        fetch("http://" + query.ip + "/light-2/off").catch(
+          () => location = "http://" + query.ip + "/light-2/off"
+        );
         light2View.classList.remove("on");
       } else {
-        fetch("http://" + query.ip + "/light-2/on");
+        fetch("http://" + query.ip + "/light-2/on").catch(
+          () => location = "http://" + query.ip + "/light-2/on"
+        );
         light2View.classList.add("on");
       }
     });
