@@ -28,6 +28,9 @@
     var light1View = document.getElementById("light-1");
     var light2View = document.getElementById("light-2");
     
+    if (light1State) light1View.classList.add("on");
+    if (light2State) light2View.classList.add("on");
+    
     light1View.addEventListener("click", e => {
       if (light1View.classList.contains("on")) {
         fetch("http://" + query.ip + "/light-1/off").catch(
